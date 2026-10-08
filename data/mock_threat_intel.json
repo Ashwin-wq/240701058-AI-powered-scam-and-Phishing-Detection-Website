@@ -1,0 +1,13 @@
+{
+    "domains": [
+        "secure-login-update-paypal-account.com",
+        "verify-apple-id-update.com",
+        "netflix-billing-update-required.net",
+        "192.168.1.1",
+        "fake-bank-login.com"
+    ],
+    "urls": [
+        "http://bit.ly/xyz123",
+        "http://example-phish.com/login"
+    ]
+}

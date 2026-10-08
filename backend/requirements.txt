@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+scikit-learn
+xgboost
+pandas
+pydantic
+email-validator
+playwright
+sqlalchemy
+psycopg2-binary
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
+google-generativeai
+pillow

@@ -1,0 +1,102 @@
+{
+    "random_forest": {
+        "metrics": {
+            "precision": 0.9307958477508651,
+            "recall": 0.950530035335689,
+            "f1_score": 0.9405594405594405,
+            "roc_auc": 0.9877773032550955,
+            "confusion_matrix": [
+                [
+                    564,
+                    40
+                ],
+                [
+                    28,
+                    538
+                ]
+            ]
+        },
+        "feature_importance": {
+            "sslfinal_state": 0.3249396265790519,
+            "url_of_anchor": 0.2438225601708599,
+            "having_sub_domain": 0.05992534084328169,
+            "web_traffic": 0.05118404965137509,
+            "prefix_suffix": 0.05012686007099648,
+            "links_in_tags": 0.04120718578090668,
+            "sfh": 0.03004183810052017,
+            "links_pointing_to_page": 0.02034414145114623,
+            "request_url": 0.01856698655211204,
+            "domain_registration_length": 0.016340145269433427,
+            "having_ip_address": 0.014565561105054314,
+            "age_of_domain": 0.014131036568752505,
+            "page_rank": 0.013268908918797841,
+            "google_index": 0.013217255776342564,
+            "dnsrecord": 0.010387994411582389,
+            "url_length": 0.009026234498870628,
+            "redirect": 0.006957994733495467,
+            "having_at_symbol": 0.006623389399078208,
+            "submitting_to_email": 0.006350536765808846,
+            "https_token": 0.006222294463273143,
+            "statistical_report": 0.005984057676504633,
+            "popupwindow": 0.0056816212326775755,
+            "abnormal_url": 0.005481901180172398,
+            "shortining_service": 0.005384383525451282,
+            "favicon": 0.004675445260002883,
+            "on_mouseover": 0.003983593878309201,
+            "double_slash_redirecting": 0.003968900319663126,
+            "port": 0.0031720356782614216,
+            "iframe": 0.002717049178956386,
+            "rightclick": 0.001701070959261516
+        }
+    },
+    "xgboost": {
+        "metrics": {
+            "precision": 0.9541446208112875,
+            "recall": 0.9558303886925795,
+            "f1_score": 0.9549867608120035,
+            "roc_auc": 0.9931025203004704,
+            "confusion_matrix": [
+                [
+                    578,
+                    26
+                ],
+                [
+                    25,
+                    541
+                ]
+            ]
+        },
+        "feature_importance": {
+            "sslfinal_state": 0.39999082684516907,
+            "url_of_anchor": 0.16478121280670166,
+            "prefix_suffix": 0.13590723276138306,
+            "sfh": 0.0320521742105484,
+            "links_in_tags": 0.01577065885066986,
+            "web_traffic": 0.015722159296274185,
+            "google_index": 0.015510810539126396,
+            "favicon": 0.014386359602212906,
+            "double_slash_redirecting": 0.01362112071365118,
+            "request_url": 0.013196446001529694,
+            "shortining_service": 0.012493009679019451,
+            "domain_registration_length": 0.012442640960216522,
+            "dnsrecord": 0.012003669515252113,
+            "having_sub_domain": 0.011817493475973606,
+            "https_token": 0.010317268781363964,
+            "abnormal_url": 0.010221842676401138,
+            "having_ip_address": 0.010170950554311275,
+            "page_rank": 0.009859942831099033,
+            "links_pointing_to_page": 0.009700617752969265,
+            "url_length": 0.008859259076416492,
+            "iframe": 0.008723457343876362,
+            "submitting_to_email": 0.008067924529314041,
+            "redirect": 0.008064128458499908,
+            "rightclick": 0.007815624587237835,
+            "popupwindow": 0.00689290463924408,
+            "statistical_report": 0.0068871984258294106,
+            "having_at_symbol": 0.0064920224249362946,
+            "age_of_domain": 0.006443042773753405,
+            "port": 0.005955491680651903,
+            "on_mouseover": 0.005832475610077381
+        }
+    }
+}
