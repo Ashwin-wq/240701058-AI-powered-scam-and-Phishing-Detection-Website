@@ -2,6 +2,17 @@
 .env
 .env.*
 
+# Playwright browser binaries (HUGE - do not commit)
+ms-playwright/
+playwright-browsers/
+
+# Runtime-generated screenshots (do not commit or deploy)
+data/screenshots/
+backend/data/screenshots/
+
+# Python cache in agents (can be regenerated)
+agents/__pycache__/
+
 # Python
 __pycache__/
 *.py[cod]

@@ -1,15 +1,34 @@
+# Core Framework
 fastapi
-uvicorn
+uvicorn[standard]
+pydantic
+python-multipart
+email-validator
+
+# Database (SQLite default; add psycopg2-binary back if using Postgres via DATABASE_URL)
+sqlalchemy
+
+# Auth
+bcrypt
+python-jose[cryptography]
+
+# ML Detection
 scikit-learn
 xgboost
-pandas
-pydantic
-email-validator
-playwright
-sqlalchemy
-psycopg2-binary
-passlib[bcrypt]
-python-jose[cryptography]
-python-multipart
+
+# AI Agents (Gemini Vision + NLP)
 google-generativeai
 pillow
+
+# HTTP utilities (live analysis HTTP fallback, threat intel)
+httpx
+requests
+
+# Env
+python-dotenv
+
+# NOTE: Intentionally excluded from this runtime requirements file:
+#   playwright     — Chromium binary alone is ~280-380 MB; incompatible with Vercel 500 MB limit
+#   pandas         — Only used in ml/training/train_models.py (training-time only)
+#   passlib[bcrypt]— passlib is never imported; auth_handler.py uses 'import bcrypt' directly
+#   psycopg2-binary— Only needed if DATABASE_URL points to Postgres; add back in that case

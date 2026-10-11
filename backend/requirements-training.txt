@@ -1,0 +1,9 @@
+# requirements-training.txt
+# Install these ONLY when running ml/training/train_models.py locally.
+# Do NOT include in Vercel or any production deployment.
+
+pandas
+scikit-learn
+xgboost
+joblib
+numpy
