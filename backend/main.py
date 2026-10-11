@@ -8,12 +8,10 @@ import os
 import asyncio
 from urllib.parse import urlparse
 
-# Fix for Playwright NotImplementedError on Windows
-if sys.platform == "win32":
-    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
-
-# Add parent directory to path to import agents and schemas
+# Add PHISHSENSE root to path (for 'from agents.x import ...' and 'from backend.x import ...')
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add backend/ directory to path (for 'from database.x import ...' and 'from api import ...')
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from backend.schemas.scan import ScanUrlRequest, ScanMessageRequest, ScanResponse
 from fastapi import UploadFile, File

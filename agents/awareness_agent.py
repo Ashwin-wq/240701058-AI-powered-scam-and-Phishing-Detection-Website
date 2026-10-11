@@ -1,16 +1,16 @@
 import os
 import json
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 class AwarenessAgent:
     def __init__(self):
         self.api_key = os.getenv("GEMINI_API_KEY")
+        self.model_name = "gemini-1.5-flash"
         self.is_available = False
         if self.api_key:
             try:
-                genai.configure(api_key=self.api_key)
-                # Use gemini-1.5-flash as requested
-                self.model = genai.GenerativeModel('gemini-1.5-flash', generation_config={"response_mime_type": "application/json"})
+                self.client = genai.Client(api_key=self.api_key)
                 self.is_available = True
             except Exception as e:
                 print(f"Warning: Gemini API configuration failed in Awareness Agent: {e}")
@@ -52,7 +52,11 @@ Output a valid JSON object strictly adhering to this schema:
 """
         
         try:
-            response = self.model.generate_content(prompt)
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(response_mime_type="application/json")
+            )
             result = json.loads(response.text)
             return result
         except Exception as e:

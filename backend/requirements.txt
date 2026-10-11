@@ -16,8 +16,8 @@ python-jose[cryptography]
 scikit-learn
 xgboost
 
-# AI Agents (Gemini Vision + NLP)
-google-generativeai
+# AI Agents (Gemini Vision + NLP) — new unified SDK
+google-genai
 pillow
 
 # HTTP utilities (live analysis HTTP fallback, threat intel)
